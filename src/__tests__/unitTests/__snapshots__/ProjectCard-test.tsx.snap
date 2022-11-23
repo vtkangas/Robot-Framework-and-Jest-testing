@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectCard snapshot 1`] = `
+<div
+  className="card"
+>
+  <img
+    alt="Test Project"
+    src="/assets/placeimg_500_300_arch1.jpg"
+  />
+  <section
+    className="section dark"
+  >
+    <a
+      href="/projects/1"
+      onClick={[Function]}
+    >
+      <h5
+        className="strong"
+      >
+        <strong>
+          Test Project
+        </strong>
+      </h5>
+      <p>
+        This text should be shortened. Exercitationem nulla ut ipsam...
+      </p>
+      <p>
+        Budget : 
+        1 234
+      </p>
+    </a>
+    <button
+      className=" bordered"
+      onClick={[Function]}
+    >
+      <span
+        className="icon-edit "
+      />
+      Edit
+    </button>
+  </section>
+</div>
+`;
