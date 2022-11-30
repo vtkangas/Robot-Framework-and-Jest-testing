@@ -42,7 +42,8 @@ function ProjectPage(props: any) {
             <div className="card large error">
               <section>
                 <p>
-                  <span className="icon-alert inverse "></span> {error}
+                  <span className="icon-alert inverse "></span> 
+                  {error}
                 </p>
               </section>
             </div>

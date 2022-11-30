@@ -54,7 +54,7 @@ Test 4: Load Function
     Click Button                        More...
     Wait Until Page Does Not Contain    Loading...
     ${newCount}     Get Element Count   class:card
-    Should Be True                      ${count} < ${newCount} 
+    Should Be True                      ${count} < ${newCount}
 
     Sleep   3s
 
