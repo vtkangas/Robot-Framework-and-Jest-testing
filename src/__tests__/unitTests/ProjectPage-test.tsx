@@ -30,7 +30,7 @@ const server = setupServer(
   rest.get("http://localhost:4000/projects/:id", (req, res, ctx) => {
     const id = Number(req.params.id);
     const project : any = MOCK_PROJECTS.find((p: Project) => p.id === id);
-    console.log(project);
+    
     if (project) {
       return res(ctx.json(project));
     } else {
@@ -41,7 +41,6 @@ const server = setupServer(
 
 //poimitaan haluttu projekti muuttujaan testiä varten
 const projectToFind : Project = MOCK_PROJECTS[3];
-console.log(projectToFind);
 
 describe('<ProjectPage />', () => {
 
