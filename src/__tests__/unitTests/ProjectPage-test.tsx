@@ -10,10 +10,8 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import { store } from "../../state";
 import ProjectPage from "../../projects/ProjectPage";
-import { url as projectsUrl } from '../../projects/projectAPI';
 import { Project } from '../../projects/Project';
 import { MOCK_PROJECTS } from '../../projects/MockProjects';
-import renderer from 'react-test-renderer';
 
 //annetaan käytettävän mock-projektin id useParams-hookille
 jest.mock('react-router-dom', () => ({
