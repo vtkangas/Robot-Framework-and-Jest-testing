@@ -20,6 +20,7 @@ function ProjectPage(props: any) {
         setLoading(false);
       })
       .catch((e) => {
+        console.log(e)
         setError(e);
         setLoading(false);
       });
@@ -42,8 +43,7 @@ function ProjectPage(props: any) {
             <div className="card large error">
               <section>
                 <p>
-                  <span className="icon-alert inverse "></span> 
-                  {error}
+                  <span className="icon-alert inverse "></span> {error}
                 </p>
               </section>
             </div>

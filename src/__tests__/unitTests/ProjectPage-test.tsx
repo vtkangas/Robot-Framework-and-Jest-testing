@@ -29,11 +29,8 @@ const server = setupServer(
     const id = Number(req.params.id);
     const project : any = MOCK_PROJECTS.find((p: Project) => p.id === id);
     
-    if (project) {
       return res(ctx.json(project));
-    } else {
-      return res(ctx.status(404));
-    }
+
   })
 );
 
@@ -79,6 +76,27 @@ describe('<ProjectPage />', () => {
       setup();
       await waitForElementToBeRemoved(() => screen.queryByText(/loading/i));
       expect(screen.getByText(projectToFind.name)).toBeInTheDocument();
+
+    });
+
+    // tarkistetaan, että virheilmoitus tulostuu
+    /* Testi epäonnistuu: TestingLibraryElementError: Unable to find an element with the text: There was an error retrieving the project(s)..
+    * Kun ProjectPage saa virheen, sovellus kaatuu: Objects are not valid as a React child (found: [object Error]). If you meant to render a 
+    * collection of children, use an array instead.
+    * Korjaus kehotus: lisätään ilmoituksen tulostukseen error.toString() tai String(error)
+    */
+    test('should display error', async () => {
+      server.use(
+        rest.get("http://localhost:4000/projects/:id", (req, res, ctx) => {
+          
+            return res(ctx.status(500));
+          
+        })
+      );
+      setup();
+      
+      await waitForElementToBeRemoved(() => screen.queryByText(/loading/i));
+      expect(screen.getByText('There was an error retrieving the project(s).', {exact: false})).toBeInTheDocument();
 
     });
 });
