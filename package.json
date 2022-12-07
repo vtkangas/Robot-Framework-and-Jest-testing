@@ -25,6 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:unit": "react-scripts test --testPathPattern=src/__tests__/unitTests",
+    "test:integration": "react-scripts test --testPathPattern=src/__tests__/integrationTests",
+    "test:e2e": "robot src/__tests__/e2e/e2e.robot",
+    "test:smoke": "robot src/__tests__/smokeTest/smokeTest.robot",
     "eject": "react-scripts eject",
     "api": "json-server api/db.json --port 4000"
   },
