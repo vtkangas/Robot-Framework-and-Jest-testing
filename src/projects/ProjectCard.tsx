@@ -20,7 +20,7 @@ function ProjectCard(props: ProjectCardProps) {
 
   return (
     <div className="card">
-      <img src={project.imageUrl} alt={project.name} />
+      <img aria-label="image" src={project.imageUrl} alt={project.name} />
       <section className="section dark">
         <Link to={'/projects/' + project.id}>
           <h5 className="strong">
@@ -30,6 +30,7 @@ function ProjectCard(props: ProjectCardProps) {
           <p>Budget : {project.budget.toLocaleString()}</p>
         </Link>
         <button
+          aria-label={`edit ${project.name}`}
           className=" bordered"
           onClick={() => {
             handleEditClick(project);

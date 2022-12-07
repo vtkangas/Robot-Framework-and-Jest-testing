@@ -83,7 +83,6 @@ describe('<ProjectPage />', () => {
     /* Testi epäonnistuu: TestingLibraryElementError: Unable to find an element with the text: There was an error retrieving the project(s)..
     * Kun ProjectPage saa virheen, sovellus kaatuu: Objects are not valid as a React child (found: [object Error]). If you meant to render a 
     * collection of children, use an array instead.
-    * Korjaus kehotus: lisätään ilmoituksen tulostukseen error.toString() tai String(error)
     */
     test('should display error', async () => {
       server.use(

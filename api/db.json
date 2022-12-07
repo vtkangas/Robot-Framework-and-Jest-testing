@@ -762,12 +762,12 @@
     },
     {
       "id": 77,
-      "name": "ABC",
-      "description": "Savutestiteksti",
+      "name": "Abshire and Sons",
+      "description": "Ergonomic mission-critical knowledge user. Consequatur pariatur eos molestiae qui aut dolorem laudantium nesciunt doloribus.",
       "imageUrl": "/assets/placeimg_500_300_arch6.jpg",
       "contractTypeId": 6,
       "contractSignedOn": "2018-08-16T18:49:06.477Z",
-      "budget": 1009,
+      "budget": 98123,
       "isActive": true
     },
     {

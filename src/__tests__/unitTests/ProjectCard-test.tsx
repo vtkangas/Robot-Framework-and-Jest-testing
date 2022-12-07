@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
 import { Project } from '../../projects/Project';
 import ProjectCard from '../../projects/ProjectCard';
@@ -59,7 +58,7 @@ describe('ProjectCard', () => {
   //tarkistetaan edit-painikkeen toimivuus valefunktion avulla
   test('handler called when edit clicked', async () => {
     setup();
-    await userEvent.setup().click(screen.getByRole('button', { name: /edit/i }));
+    await userEvent.setup().click(screen.getByRole('button', { name: 'edit Test Project' }));
     expect(handleEdit).toBeCalledTimes(1);
     expect(handleEdit).toBeCalledWith(mockProject);
   });

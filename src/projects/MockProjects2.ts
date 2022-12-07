@@ -1,4 +1,4 @@
-import { Project } from '../../src/projects/Project';
+import { Project } from './Project';
 
 export const MOCK_PROJECTS = [
   new Project({
@@ -61,17 +61,6 @@ export const MOCK_PROJECTS = [
     name: 'Lesch - Waelchi',
     description:
       'Profound mobile project. Rem consequatur laborum explicabo sint odit et illo voluptas expedita.',
-    imageUrl: '/assets/placeimg_500_300_arch1.jpg',
-    contractTypeId: 3,
-    contractSignedOn: '2016-09-23T21:27:25.035Z',
-    budget: 53407,
-    isActive: false,
-  }),
-  new Project({
-    id: 7,
-    name: 'Editable',
-    description:
-      'Test project for edit/save project testing in ProjectList-test. Rem consequatur laborum explicabo sint odit et illo voluptas expedita.',
     imageUrl: '/assets/placeimg_500_300_arch1.jpg',
     contractTypeId: 3,
     contractSignedOn: '2016-09-23T21:27:25.035Z',

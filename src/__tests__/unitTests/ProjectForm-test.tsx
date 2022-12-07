@@ -104,7 +104,7 @@ describe('ProjectForm', () => {
         let errorMessage : string = 'Name is required';
         const user = userEvent.setup();
         await user.clear(nameTextBox);
-        await expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
+        expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
     });
 
     test('name should display minlength validation', async () => {
@@ -113,7 +113,7 @@ describe('ProjectForm', () => {
         const user = userEvent.setup();
         await user.clear(nameTextBox);
         await user.type(nameTextBox, 'ab');
-        await expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
+        expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
     });
 
     test('description should display no description validation', async () => {
@@ -121,7 +121,7 @@ describe('ProjectForm', () => {
         let errorMessage : string = 'Description is required.';
         const user = userEvent.setup();
         await user.clear(descTextBox);
-        await expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
+        expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
     });
 
     test('budget should display more then 0 validation', async () => {
@@ -130,7 +130,7 @@ describe('ProjectForm', () => {
         const user = userEvent.setup();
         await user.clear(budgetTextBox);
         await user.type(budgetTextBox, '0');
-        await expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
+        expect(screen.getByRole('alert')).toHaveTextContent(errorMessage);
     });
     
 });

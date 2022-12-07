@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.10.2 on win32)" generated="20221206 23:01:50.974" rpa="false" schemaversion="3">
+<suite id="s1" name="E2E" source="C:\Users\Ville\AMK\XAMK\2022_syksy\OhjelmistoTestaus\harjoitustyo\Ohjelmistotestaus-harjoitustyo\src\__tests__\e2e\e2e.robot">
+<test id="s1-t1" name="Test 1: User wants to edit project from second page" line="18">
+<kw name="Open App">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:01:54.114" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20221206 23:01:54.109" endtime="20221206 23:02:03.322"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 23:02:03.323" endtime="20221206 23:02:03.573"/>
+</kw>
+<status status="PASS" starttime="20221206 23:01:54.104" endtime="20221206 23:02:03.576"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${PROJECT NAME}</var>
+<arg>Dillesik LLCs</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:02:03.585" level="INFO">${PROJECT NAME} = Dillesik LLCs</msg>
+<status status="PASS" starttime="20221206 23:02:03.582" endtime="20221206 23:02:03.585"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW NAME}</var>
+<arg>Dillesik LLCs Updated</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:02:03.592" level="INFO">${NEW NAME} = Dillesik LLCs Updated</msg>
+<status status="PASS" starttime="20221206 23:02:03.588" endtime="20221206 23:02:03.593"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Projects</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:03.604" level="INFO">Clicking link 'Projects'.</msg>
+<status status="PASS" starttime="20221206 23:02:03.597" endtime="20221206 23:02:04.306"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:04.309" endtime="20221206 23:02:05.359"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:05.367" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:02:05.362" endtime="20221206 23:02:05.887"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:05.890" endtime="20221206 23:02:06.300"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${PROJECT NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:06.312" level="INFO">Clicking button 'xpath://button[@aria-label='edit Dillesik LLCs']'.</msg>
+<status status="PASS" starttime="20221206 23:02:06.304" endtime="20221206 23:02:07.311"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:07.314" endtime="20221206 23:02:07.427"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:07.434" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:07.431" endtime="20221206 23:02:07.783"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${NEW NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:07.794" level="INFO">Typing text 'Dillesik LLCs Updated' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:07.786" endtime="20221206 23:02:09.009"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:09.020" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:02:09.013" endtime="20221206 23:02:09.559"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${NEW NAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:09.563" endtime="20221206 23:02:09.974"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${NEW NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:02:10.068" level="INFO">Current page contains text 'Dillesik LLCs Updated'.</msg>
+<status status="PASS" starttime="20221206 23:02:09.977" endtime="20221206 23:02:10.069"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${NEW NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:10.080" level="INFO">Clicking button 'xpath://button[@aria-label='edit Dillesik LLCs Updated']'.</msg>
+<status status="PASS" starttime="20221206 23:02:10.073" endtime="20221206 23:02:10.589"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:10.593" endtime="20221206 23:02:10.695"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:10.710" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:10.704" endtime="20221206 23:02:11.173"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${PROJECT NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:11.186" level="INFO">Typing text 'Dillesik LLCs' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:11.178" endtime="20221206 23:02:11.975"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:11.984" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:02:11.979" endtime="20221206 23:02:12.321"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath://img[@alt='${PROJECT NAME}']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:12.325" endtime="20221206 23:02:12.624"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:02:12.628" endtime="20221206 23:02:17.357"/>
+</kw>
+<status status="PASS" starttime="20221206 23:01:54.099" endtime="20221206 23:02:17.361"/>
+</test>
+<test id="s1-t2" name="Test 2: User gives too short name to project" line="44">
+<kw name="Set Variable" library="BuiltIn">
+<var>${PROJECT NAME}</var>
+<arg>Anderson LLC</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:02:17.384" level="INFO">${PROJECT NAME} = Anderson LLC</msg>
+<status status="PASS" starttime="20221206 23:02:17.380" endtime="20221206 23:02:17.384"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${INVALID NAME}</var>
+<arg>An</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:02:17.391" level="INFO">${INVALID NAME} = An</msg>
+<status status="PASS" starttime="20221206 23:02:17.388" endtime="20221206 23:02:17.391"/>
+</kw>
+<kw name="Open App">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${HOME URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:02:17.401" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<status status="PASS" starttime="20221206 23:02:17.398" endtime="20221206 23:02:27.696"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221206 23:02:27.697" endtime="20221206 23:02:27.935"/>
+</kw>
+<status status="PASS" starttime="20221206 23:02:17.395" endtime="20221206 23:02:27.936"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Projects</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:27.949" level="INFO">Clicking link 'Projects'.</msg>
+<status status="PASS" starttime="20221206 23:02:27.942" endtime="20221206 23:02:28.664"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:28.670" endtime="20221206 23:02:30.162"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${PROJECT NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:30.176" level="INFO">Clicking button 'xpath://button[@aria-label='edit Anderson LLC']'.</msg>
+<status status="PASS" starttime="20221206 23:02:30.168" endtime="20221206 23:02:30.886"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:30.891" endtime="20221206 23:02:31.135"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:31.156" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:31.147" endtime="20221206 23:02:31.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${INVALID NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:31.630" level="INFO">Typing text 'An' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:31.623" endtime="20221206 23:02:32.371"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>tag:p &gt;&gt; xpath://*[contains(text(), 'Name needs to be at least 3 characters.')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:32.376" endtime="20221206 23:02:32.713"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:32.775" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:02:32.768" endtime="20221206 23:02:33.855"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:33.875" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:33.866" endtime="20221206 23:02:34.312"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${PROJECT NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:34.328" level="INFO">Typing text 'Anderson LLC' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:02:34.320" endtime="20221206 23:02:34.958"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>tag:p &gt;&gt; xpath://*[contains(text(), 'Name needs to be at least 3 characters.')]</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:34.961" endtime="20221206 23:02:35.084"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:02:35.093" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:02:35.087" endtime="20221206 23:02:35.426"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//img[@alt='${PROJECT NAME}']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:02:35.429" endtime="20221206 23:02:35.804"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${PROJECT NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:02:35.956" level="INFO">Current page contains text 'Anderson LLC'.</msg>
+<status status="PASS" starttime="20221206 23:02:35.808" endtime="20221206 23:02:35.957"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:02:35.961" endtime="20221206 23:02:40.703"/>
+</kw>
+<status status="PASS" starttime="20221206 23:02:17.373" endtime="20221206 23:02:40.706"/>
+</test>
+<test id="s1-t3" name="Test 3: User checks project activity (detail page) and changes it" line="67">
+<kw name="Set Variable" library="BuiltIn">
+<var>${PROJECT NAME}</var>
+<arg>Armstrong - Hands</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:02:40.723" level="INFO">${PROJECT NAME} = Armstrong - Hands</msg>
+<status status="PASS" starttime="20221206 23:02:40.720" endtime="20221206 23:02:40.723"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/95</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:02:40.733" level="INFO">Opening browser 'firefox' to base url 'http://localhost:3000/projects/95'.</msg>
+<msg timestamp="20221206 23:02:40.742" level="INFO">Firefox driver log is always forced to to: C:\Users\Ville\AMK\XAMK\2022_syksy\OhjelmistoTestaus\harjoitustyo\Ohjelmistotestaus-harjoitustyo\src\__tests__\e2e\geckodriver-5.log</msg>
+<status status="PASS" starttime="20221206 23:02:40.727" endtime="20221206 23:03:04.293"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:04.298" endtime="20221206 23:03:04.722"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>inactive</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:03:04.854" level="INFO">Current page contains text 'inactive'.</msg>
+<status status="PASS" starttime="20221206 23:03:04.726" endtime="20221206 23:03:04.855"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Projects</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:04.865" level="INFO">Clicking link 'Projects'.</msg>
+<status status="PASS" starttime="20221206 23:03:04.859" endtime="20221206 23:03:05.513"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:05.516" endtime="20221206 23:03:05.804"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${PROJECT NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:05.815" level="INFO">Clicking button 'xpath://button[@aria-label='edit Armstrong - Hands']'.</msg>
+<status status="PASS" starttime="20221206 23:03:05.808" endtime="20221206 23:03:06.722"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>isActive</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:06.729" level="INFO">Selecting checkbox 'isActive'.</msg>
+<status status="PASS" starttime="20221206 23:03:06.725" endtime="20221206 23:03:07.267"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:07.278" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:03:07.271" endtime="20221206 23:03:07.705"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//img[@alt='${PROJECT NAME}']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:07.710" endtime="20221206 23:03:07.810"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[contains(text(), '${PROJECT NAME}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:07.820" level="INFO">Clicking element '//*[contains(text(), 'Armstrong - Hands')]'.</msg>
+<status status="PASS" starttime="20221206 23:03:07.814" endtime="20221206 23:03:08.215"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/95</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20221206 23:03:08.231" level="INFO">Current location is 'http://localhost:3000/projects/95'.</msg>
+<status status="PASS" starttime="20221206 23:03:08.218" endtime="20221206 23:03:08.232"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:08.235" endtime="20221206 23:03:08.484"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>active</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:03:08.652" level="INFO">Current page contains text 'active'.</msg>
+<status status="PASS" starttime="20221206 23:03:08.487" endtime="20221206 23:03:08.653"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221206 23:03:08.658" level="INFO">Opening url 'http://localhost:3000/projects/'</msg>
+<status status="PASS" starttime="20221206 23:03:08.656" endtime="20221206 23:03:10.261"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:10.267" endtime="20221206 23:03:10.768"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${PROJECT NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:10.779" level="INFO">Clicking button 'xpath://button[@aria-label='edit Armstrong - Hands']'.</msg>
+<status status="PASS" starttime="20221206 23:03:10.772" endtime="20221206 23:03:11.654"/>
+</kw>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<arg>isActive</arg>
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:11.667" level="INFO">Unselecting checkbox 'isActive'.</msg>
+<status status="PASS" starttime="20221206 23:03:11.660" endtime="20221206 23:03:12.140"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:12.147" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:03:12.144" endtime="20221206 23:03:12.504"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//img[@alt='${PROJECT NAME}']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:12.508" endtime="20221206 23:03:12.542"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:03:12.546" endtime="20221206 23:03:24.683"/>
+</kw>
+<status status="PASS" starttime="20221206 23:02:40.715" endtime="20221206 23:03:24.687"/>
+</test>
+<test id="s1-t4" name="Test 4: User edits project, closes browser and checks that changes are still there" line="98">
+<kw name="Set Variable" library="BuiltIn">
+<var>${PROJECT NAME}</var>
+<arg>Crona Inc</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:03:24.707" level="INFO">${PROJECT NAME} = Crona Inc</msg>
+<status status="PASS" starttime="20221206 23:03:24.704" endtime="20221206 23:03:24.707"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${NEW NAME}</var>
+<arg>Crona Inc Updated</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:03:24.714" level="INFO">${NEW NAME} = Crona Inc Updated</msg>
+<status status="PASS" starttime="20221206 23:03:24.711" endtime="20221206 23:03:24.715"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:03:24.722" level="INFO">Opening browser 'firefox' to base url 'http://localhost:3000/projects/'.</msg>
+<msg timestamp="20221206 23:03:24.731" level="INFO">Firefox driver log is always forced to to: C:\Users\Ville\AMK\XAMK\2022_syksy\OhjelmistoTestaus\harjoitustyo\Ohjelmistotestaus-harjoitustyo\src\__tests__\e2e\geckodriver-6.log</msg>
+<status status="PASS" starttime="20221206 23:03:24.718" endtime="20221206 23:03:47.506"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:47.511" endtime="20221206 23:03:48.262"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${PROJECT NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:48.274" level="INFO">Clicking button 'xpath://button[@aria-label='edit Crona Inc']'.</msg>
+<status status="PASS" starttime="20221206 23:03:48.266" endtime="20221206 23:03:49.250"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:49.254" endtime="20221206 23:03:49.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:49.304" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:03:49.299" endtime="20221206 23:03:49.627"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${NEW NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:49.637" level="INFO">Typing text 'Crona Inc Updated' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:03:49.631" endtime="20221206 23:03:50.355"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:03:50.366" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:03:50.359" endtime="20221206 23:03:50.817"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${NEW NAME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:03:50.822" endtime="20221206 23:03:51.030"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${NEW NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:03:51.349" level="INFO">Current page contains text 'Crona Inc Updated'.</msg>
+<status status="PASS" starttime="20221206 23:03:51.033" endtime="20221206 23:03:51.350"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:03:51.354" endtime="20221206 23:04:00.658"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221206 23:04:03.669" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221206 23:04:00.662" endtime="20221206 23:04:03.670"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:04:03.678" level="INFO">Opening browser 'firefox' to base url 'http://localhost:3000/projects/'.</msg>
+<msg timestamp="20221206 23:04:03.687" level="INFO">Firefox driver log is always forced to to: C:\Users\Ville\AMK\XAMK\2022_syksy\OhjelmistoTestaus\harjoitustyo\Ohjelmistotestaus-harjoitustyo\src\__tests__\e2e\geckodriver-7.log</msg>
+<status status="PASS" starttime="20221206 23:04:03.674" endtime="20221206 23:04:28.349"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:04:28.354" endtime="20221206 23:04:29.257"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${NEW NAME}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221206 23:04:29.450" level="INFO">Current page contains text 'Crona Inc Updated'.</msg>
+<status status="PASS" starttime="20221206 23:04:29.261" endtime="20221206 23:04:29.451"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221206 23:04:29.457" level="INFO">Opening url 'http://localhost:3000/projects/'</msg>
+<status status="PASS" starttime="20221206 23:04:29.455" endtime="20221206 23:04:30.949"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@aria-label='edit ${NEW NAME}']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:04:31.026" level="INFO">Clicking button 'xpath://button[@aria-label='edit Crona Inc Updated']'.</msg>
+<status status="PASS" starttime="20221206 23:04:31.003" endtime="20221206 23:04:32.600"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:name</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221206 23:04:32.607" level="INFO">Clicking element 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:04:32.603" endtime="20221206 23:04:33.018"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:name</arg>
+<arg>${PROJECT NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221206 23:04:33.029" level="INFO">Typing text 'Crona Inc' into text field 'name:name'.</msg>
+<status status="PASS" starttime="20221206 23:04:33.022" endtime="20221206 23:04:33.456"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Save</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:04:33.465" level="INFO">Clicking button 'Save'.</msg>
+<status status="PASS" starttime="20221206 23:04:33.459" endtime="20221206 23:04:34.119"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//img[@alt='${PROJECT NAME}']</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221206 23:04:34.123" endtime="20221206 23:04:34.256"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:04:34.260" endtime="20221206 23:04:43.849"/>
+</kw>
+<status status="PASS" starttime="20221206 23:03:24.697" endtime="20221206 23:04:43.853"/>
+</test>
+<test id="s1-t5" name="Test 5: User wants to view all projects" line="128">
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${file}</var>
+<arg>C:\\Users\\Ville\\AMK\\XAMK\\2022_syksy\\OhjelmistoTestaus\\harjoitustyo\\Ohjelmistotestaus-harjoitustyo\\src\\__tests__\\e2e${/}..\\..\\..\\api\\db.json</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20221206 23:04:43.893" level="INFO">${file} = {'projects': [{'id': 1, 'name': 'Johnson - Kutch', 'description': 'Fully-configurable intermediate framework. Ullam occaecati libero laudantium nihil voluptas omnis qui modi qui.', 'imageUrl': '/asset...</msg>
+<status status="PASS" starttime="20221206 23:04:43.876" endtime="20221206 23:04:43.894"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${projects}</var>
+<arg>${file}</arg>
+<arg>$.projects</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 23:04:44.254" level="INFO">${projects} = [[{'id': 1, 'name': 'Johnson - Kutch', 'description': 'Fully-configurable intermediate framework. Ullam occaecati libero laudantium nihil voluptas omnis qui modi qui.', 'imageUrl': '/assets/placeimg_5...</msg>
+<status status="PASS" starttime="20221206 23:04:43.897" endtime="20221206 23:04:44.255"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${length}</var>
+<arg>${projects[0]}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221206 23:04:44.262" level="INFO">Length is 97</msg>
+<msg timestamp="20221206 23:04:44.264" level="INFO">${length} = 97</msg>
+<status status="PASS" starttime="20221206 23:04:44.258" endtime="20221206 23:04:44.264"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000/projects/</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221206 23:04:44.271" level="INFO">Opening browser 'firefox' to base url 'http://localhost:3000/projects/'.</msg>
+<msg timestamp="20221206 23:04:44.279" level="INFO">Firefox driver log is always forced to to: C:\Users\Ville\AMK\XAMK\2022_syksy\OhjelmistoTestaus\harjoitustyo\Ohjelmistotestaus-harjoitustyo\src\__tests__\e2e\geckodriver-8.log</msg>
+<status status="PASS" starttime="20221206 23:04:44.267" endtime="20221206 23:05:07.096"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:07.101" endtime="20221206 23:05:07.752"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:07.899" level="INFO">${count} = 20</msg>
+<status status="PASS" starttime="20221206 23:05:07.756" endtime="20221206 23:05:07.900"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:07.906" level="INFO">${oldCount} = 0</msg>
+<status status="PASS" starttime="20221206 23:05:07.904" endtime="20221206 23:05:07.907"/>
+</kw>
+<while condition="${count} != ${oldCount}">
+<iter>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>${count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:07.916" level="INFO">${oldCount} = 20</msg>
+<status status="PASS" starttime="20221206 23:05:07.914" endtime="20221206 23:05:07.917"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:05:07.923" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:05:07.918" endtime="20221206 23:05:08.798"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:08.800" endtime="20221206 23:05:08.978"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:09.063" level="INFO">${count} = 40</msg>
+<status status="PASS" starttime="20221206 23:05:08.980" endtime="20221206 23:05:09.064"/>
+</kw>
+<status status="PASS" starttime="20221206 23:05:07.913" endtime="20221206 23:05:09.065"/>
+</iter>
+<iter>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>${count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:09.069" level="INFO">${oldCount} = 40</msg>
+<status status="PASS" starttime="20221206 23:05:09.067" endtime="20221206 23:05:09.069"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:05:09.076" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:05:09.070" endtime="20221206 23:05:09.573"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:09.574" endtime="20221206 23:05:09.612"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:09.668" level="INFO">${count} = 60</msg>
+<status status="PASS" starttime="20221206 23:05:09.613" endtime="20221206 23:05:09.668"/>
+</kw>
+<status status="PASS" starttime="20221206 23:05:09.066" endtime="20221206 23:05:09.669"/>
+</iter>
+<iter>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>${count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:09.675" level="INFO">${oldCount} = 60</msg>
+<status status="PASS" starttime="20221206 23:05:09.672" endtime="20221206 23:05:09.676"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:05:09.686" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:05:09.677" endtime="20221206 23:05:10.412"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:10.414" endtime="20221206 23:05:10.640"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:10.712" level="INFO">${count} = 80</msg>
+<status status="PASS" starttime="20221206 23:05:10.641" endtime="20221206 23:05:10.713"/>
+</kw>
+<status status="PASS" starttime="20221206 23:05:09.671" endtime="20221206 23:05:10.713"/>
+</iter>
+<iter>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>${count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:10.717" level="INFO">${oldCount} = 80</msg>
+<status status="PASS" starttime="20221206 23:05:10.716" endtime="20221206 23:05:10.718"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:05:10.722" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:05:10.719" endtime="20221206 23:05:11.427"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:11.428" endtime="20221206 23:05:11.565"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:11.684" level="INFO">${count} = 97</msg>
+<status status="PASS" starttime="20221206 23:05:11.566" endtime="20221206 23:05:11.685"/>
+</kw>
+<status status="PASS" starttime="20221206 23:05:10.715" endtime="20221206 23:05:11.686"/>
+</iter>
+<iter>
+<kw name="Set Variable" library="BuiltIn">
+<var>${oldCount}</var>
+<arg>${count}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20221206 23:05:11.693" level="INFO">${oldCount} = 97</msg>
+<status status="PASS" starttime="20221206 23:05:11.690" endtime="20221206 23:05:11.693"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>More...</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221206 23:05:11.702" level="INFO">Clicking button 'More...'.</msg>
+<status status="PASS" starttime="20221206 23:05:11.695" endtime="20221206 23:05:12.310"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain" library="SeleniumLibrary">
+<arg>Loading...</arg>
+<doc>Waits until ``text`` disappears from the current page.</doc>
+<status status="PASS" starttime="20221206 23:05:12.311" endtime="20221206 23:05:12.389"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${count}</var>
+<arg>class:card</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20221206 23:05:12.479" level="INFO">${count} = 97</msg>
+<status status="PASS" starttime="20221206 23:05:12.391" endtime="20221206 23:05:12.479"/>
+</kw>
+<status status="PASS" starttime="20221206 23:05:11.688" endtime="20221206 23:05:12.479"/>
+</iter>
+<status status="PASS" starttime="20221206 23:05:07.912" endtime="20221206 23:05:12.480"/>
+</while>
+<kw name="Log To Console" library="BuiltIn">
+<arg>projects: ${length}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 23:05:12.484" endtime="20221206 23:05:12.488"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>project cards: ${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 23:05:12.492" endtime="20221206 23:05:12.496"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221206 23:05:12.499" endtime="20221206 23:05:21.116"/>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<arg>${count} == ${length}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" starttime="20221206 23:05:21.120" endtime="20221206 23:05:21.123"/>
+</kw>
+<status status="PASS" starttime="20221206 23:04:43.863" endtime="20221206 23:05:21.127"/>
+</test>
+<doc>A test suite for end to end testing</doc>
+<status status="PASS" starttime="20221206 23:01:50.993" endtime="20221206 23:05:21.141"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="E2E">E2E</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
