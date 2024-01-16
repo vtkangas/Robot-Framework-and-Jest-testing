@@ -1,0 +1,14 @@
+1670360411547	geckodriver	INFO	Listening on 127.0.0.1:49466
+1670360414628	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49467" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Ville\\AppData\\Local\\Temp\\rust_mozprofileDbRtXK"
+1670360418833	Marionette	INFO	Marionette enabled
+1670360418885	Marionette	INFO	Listening on port 49476
+Read port: 49476
+Read port: 49476
+WebDriver BiDi listening on ws://127.0.0.1:49467
+1670360420768	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Ville\\AppData\\Local\\Temp\\rust_mozprofileDbRtXK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49467/devtools/browser/6759fe7d-69d2-4aea-9b8d-1b2b16a7fb05
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://localhost:3000."
+1670360459462	Marionette	INFO	Stopped listening on port 49476

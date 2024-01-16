@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-  ]
+, "unitTests", "unitTests", "smokeTest"  ]
 }
